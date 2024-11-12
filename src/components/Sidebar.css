@@ -1,0 +1,44 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px; /* Ajuste a largura da sidebar conforme necessário */
+  height: 100%;
+  background-color: #fff; /* Fundo branco para a sidebar */
+  color: #1c1b1b; /* Cor do texto preta */
+  transition: transform 0.3s ease-in-out; /* Transição suave quando a sidebar for aberta ou fechada */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra sutil à sidebar */
+}
+
+.sidebar-close-btn{
+display: none;
+}
+
+/* Opcional: Se você quiser esconder a sidebar inicialmente com um transform */
+.sidebar.closed {
+  transform: translateX(-100%); /* Esconde a sidebar quando estiver com a classe "closed" */
+}
+
+/* Estilo do texto dentro da sidebar */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  border-bottom: 1px solid #ddd; /* Borda separando os itens */
+  background-color: #333;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #1c1b1b; /* Cor preta para os links */
+  display: block;
+  font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #f4f4f4; /* Altere a cor do fundo ao passar o mouse sobre o link */
+}
