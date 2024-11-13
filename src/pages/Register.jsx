@@ -29,9 +29,12 @@ const Register = () => {
   };
 
   return (
-    <main>
+    <main className="d-flex flex-fill custom-content" >
       <h2>Página de Registro</h2>
       <form onSubmit={handleRegister}>
+
+      <div class="col-sm-5 col-lg-2">
+      <div class="br-input">
         <input
           type="email"
           placeholder="E-mail"
@@ -39,6 +42,12 @@ const Register = () => {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
+        </div>
+        </div>
+
+
+        <div class="col-sm-5 col-lg-2">
+           <div class="br-input">
         <input
           type="date"
           placeholder="Data de Nascimento"
@@ -46,6 +55,12 @@ const Register = () => {
           onChange={(e) => setDtNascimento(e.target.value)}
           required
         />
+
+        </div>
+        </div>
+
+        <div class="col-sm-5 col-lg-2">
+           <div class="br-input">
         <input
           type="password"
           placeholder="Senha"
@@ -53,7 +68,10 @@ const Register = () => {
           onChange={(e) => setSenha(e.target.value)}
           required
         />
-        <button type="submit">Registrar</button>
+        </div>
+        </div>
+        <br />
+        <button className="br-button primary mr-3" type="submit">Registrar</button>
       </form>
     </main>
   );

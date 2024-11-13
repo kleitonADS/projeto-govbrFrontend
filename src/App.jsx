@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import { BrowserRouter as  Route, Routes, useNavigate } from 'react-router-dom';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Access from './pages/Access';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
+import { AuthProvider } from './context/AuthContext'; 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '@govbr-ds/core/dist/core.min.js';
 import '@govbr-ds/core/dist/core.min.css';
-import './App.css'; // Importe o arquivo CSS
+import './App.css'; 
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [userEmail, setUserEmail] = useState('');
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Estado da sidebar
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); 
   const navigate = useNavigate();
 
   const handleLogin = (email) => {
@@ -29,13 +30,12 @@ const App = () => {
     navigate('/acesso');
   };
 
-  // Função para alternar o estado da sidebar
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
   return (
-
+    <AuthProvider>
       <div className={`template-base ${isSidebarOpen ? 'sidebar-open' : ''}`}>
 
         <Header userEmail={userEmail} loggedIn={loggedIn} onLogout={handleLogout} toggleSidebar={toggleSidebar} />
@@ -49,6 +49,7 @@ const App = () => {
 
         <ToastContainer />
       </div>
+      </AuthProvider>
 
   );
 };

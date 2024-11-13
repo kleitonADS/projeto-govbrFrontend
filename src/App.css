@@ -1,92 +1,30 @@
-/* Estilos para a estrutura do layout principal */
+
 .template-base {
   display: flex;
-  transition: margin-left 0.3s ease-in-out; /* Animação suave para transição */
+  transition: margin-left 0.3s ease-in-out; 
   padding-left: 0;
 }
 
-/* Quando a sidebar está aberta, aplica a margem à esquerda */
+
 .template-base.sidebar-open {
-  margin-left: 250px; /* Empurra o conteúdo para a direita */
+  margin-left: 250px; 
 }
 
-/* Estilo para o Header */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  z-index: 1000; /* Garante que o header fique por cima */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+.custom-content{
+  flex-direction: column;
+  padding: 80px;
 }
 
-header button {
-  background-color: #555;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+.br-button{
+  margin-left: 17px;
 }
 
-header button:hover {
-  background-color: #777;
-}
-
-header div {
-  font-size: 18px;
-}
-
-/* Estilo para o conteúdo da Sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 250px; /* Largura da Sidebar */
-  height: 100%;
-  background-color: #333;
-  color: white;
-  padding-top: 60px; /* Espaço para o header */
-  transition: transform 0.3s ease-in-out; /* Transição suave */
-  z-index: 999; /* Para garantir que a sidebar fique acima do conteúdo */
-}
-
-.sidebar.closed {
-  transform: translateX(-250px); /* A sidebar é movida para fora da tela quando fechada */
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  padding: 15px;
-  border-bottom: 1px solid #444;
-}
-
-.sidebar ul li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-}
-
-.sidebar ul li a:hover {
-  background-color: #555;
-}
-
-/* Estilo para o conteúdo principal */
 .main-content {
   flex: 1;
   padding: 20px;
-  margin-top: 60px; /* Espaço para o header */
-  transition: margin-left 0.3s ease-in-out; /* Transição suave quando o conteúdo é movido */
+  margin-top: 60px; 
+  transition: margin-left 0.3s ease-in-out; 
 }
 
 .main-content > h1 {
@@ -99,16 +37,8 @@ header div {
   line-height: 1.6;
 }
 
-/* Estilos para a área de Toast (notificação) */
+
 .toast-container {
-  z-index: 1100; /* Para garantir que as notificações fiquem por cima */
+  z-index: 1100; 
 }
 
-
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  gap: 20px;  /* Espaço entre os elementos dentro de <main> */
-}

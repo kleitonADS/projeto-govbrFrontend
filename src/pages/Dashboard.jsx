@@ -15,7 +15,7 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <main>
+    <main className="d-flex flex-fill custom-content">
       <h2>Painel de Controle</h2>
       <table>
         <thead>
