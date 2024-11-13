@@ -1,3 +1,21 @@
+# Projeto Front-End
+
+## Como rodar
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/<seu-usuario>/projeto-govbrFrontend.git
+
+2.Acesse a pasta do projeto:
+cd projeto-govbrFrontend
+
+3.Instale as dependências:
+npm install
+
+4.Executar o Projeto
+npm start
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
